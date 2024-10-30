@@ -19,7 +19,6 @@
 		030EF1DA26FD2A13000D3E42 /* ReciboTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 030EF1D826FD2A13000D3E42 /* ReciboTableViewCell.xib */; };
 		03431DCC270290D200EB8D91 /* FormatadorDeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03431DCB270290D200EB8D91 /* FormatadorDeData.swift */; };
 		03431DD32703BD2B00EB8D91 /* Alura_Ponto.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 03431DD12703BD2B00EB8D91 /* Alura_Ponto.xcdatamodeld */; };
-		034DC6FA270A26BF00156335 /* Secao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034DC6F9270A26BF00156335 /* Secao.swift */; };
 		03E880B22704FC4400033A34 /* Recibo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E880B12704FC4400033A34 /* Recibo.swift */; };
 		6DB103EE2CD1A5C100BCE899 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB103ED2CD1A5BD00BCE899 /* Camera.swift */; };
 /* End PBXBuildFile section */
@@ -39,7 +38,6 @@
 		030EF1D826FD2A13000D3E42 /* ReciboTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReciboTableViewCell.xib; sourceTree = "<group>"; };
 		03431DCB270290D200EB8D91 /* FormatadorDeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatadorDeData.swift; sourceTree = "<group>"; };
 		03431DD22703BD2B00EB8D91 /* Alura_Ponto.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Alura_Ponto.xcdatamodel; sourceTree = "<group>"; };
-		034DC6F9270A26BF00156335 /* Secao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secao.swift; sourceTree = "<group>"; };
 		03E880B12704FC4400033A34 /* Recibo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recibo.swift; sourceTree = "<group>"; };
 		6DB103ED2CD1A5BD00BCE899 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -150,7 +148,6 @@
 			isa = PBXGroup;
 			children = (
 				6DB103ED2CD1A5BD00BCE899 /* Camera.swift */,
-				034DC6F9270A26BF00156335 /* Secao.swift */,
 				03E880B12704FC4400033A34 /* Recibo.swift */,
 				03431DCB270290D200EB8D91 /* FormatadorDeData.swift */,
 			);
@@ -247,7 +244,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				030EF1D926FD2A13000D3E42 /* ReciboTableViewCell.swift in Sources */,
-				034DC6FA270A26BF00156335 /* Secao.swift in Sources */,
 				030EF1CB26FBE62E000D3E42 /* ReciboViewController.swift in Sources */,
 				03431DD32703BD2B00EB8D91 /* Alura_Ponto.xcdatamodeld in Sources */,
 				030EF1A626FBD61C000D3E42 /* AppDelegate.swift in Sources */,
