@@ -50,4 +50,14 @@ extension Recibo {
             print(error.localizedDescription)
         }
     }
+    
+    func deletar(_ contexto: NSManagedObjectContext) {
+        contexto.delete(self)
+        
+        do {
+            try contexto.save()
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
 }

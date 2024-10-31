@@ -20,6 +20,13 @@ class ReciboViewController: UIViewController {
     // MARK: - Atributos
     private lazy var camera = Camera()
     private lazy var controladorDeImagem = UIImagePickerController()
+    
+    var contexto: NSManagedObjectContext = {
+        let contexto = UIApplication.shared.delegate as! AppDelegate
+        return contexto.persistentContainer.viewContext
+    }()
+    
+    
     let buscador: NSFetchedResultsController<Recibo>  = {
         let fetchRequest: NSFetchRequest<Recibo> = Recibo.fetchRequest()
         let sortDescriptor = NSSortDescriptor(key: "data", ascending: false)
@@ -119,9 +126,9 @@ extension ReciboViewController: UITableViewDelegate {
 
 extension ReciboViewController: ReciboTableViewCellDelegate {
     func deletarRecibo(_ index: Int) {
-//        Secao.shared.listaDeRecibos.remove(at: index)
-//        buscador.fetchedObjects?.remove(at: index)
-        reciboTableView.reloadData()
+        guard let recibo = buscador.fetchedObjects?[index] else { return }
+        recibo.deletar(contexto)
+//        reciboTableView.reloadData()
     }
 }
 
@@ -133,5 +140,11 @@ extension ReciboViewController: CameraDelegalate {
 }
 
 extension ReciboViewController: NSFetchedResultsControllerDelegate {
+    
+    func controller(_ controller: NSFetchedResultsController<any NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        if case .delete = type, let indexPath = indexPath {
+            reciboTableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
     
 }
